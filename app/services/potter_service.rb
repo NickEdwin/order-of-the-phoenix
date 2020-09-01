@@ -16,6 +16,11 @@ class PotterService
     end
   end
 
+  def characters
+    houses = conn.get("characters?key=#{ENV['POTTER_API_KEY']}")
+    JSON.parse(houses.body, symbolize_names: true)
+  end
+
   private
 
   def conn
