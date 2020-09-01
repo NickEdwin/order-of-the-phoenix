@@ -1,5 +1,7 @@
 class SearchController < ApplicationController
 
   def index
-  end 
+    house = params[:house]
+    @house = Potter.house_members(house).first
+  end
 end
