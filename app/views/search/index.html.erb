@@ -1,3 +1,8 @@
 <h1>House: <%= @house.house_name %> </h1>
 
 <h4>House Members: <%= @house.members.count %> </h4>
+
+<h5>Students by Name:</h5>
+<% @house.members.each do |member| %>
+  <p><%= member[:name] %> of House <%= @house.house_name %></p>
+<% end %>
