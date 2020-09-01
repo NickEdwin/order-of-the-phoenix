@@ -12,9 +12,9 @@ RSpec.describe 'As a user' do
     expect(current_path).to eq(search_path)
 
     expect(page).to have_content("House Members: 40")
-    expect(page).to have_content("Hermione Granger")
-    expect(page).to have_content("Ronald Weasley")
-    expect(page).to have_content("Harry Potter")
+    expect(page).to have_content("Hermione Granger of House Gryffindor, Role: student, Patronus: otter")
+    expect(page).to have_content("Ronald Weasley of House Gryffindor, Role: student, Patronus: jack russell terrier")
+    expect(page).to have_content("Harry Potter of House Gryffindor, Role: student, Patronus: stag")
 
   end
 end
