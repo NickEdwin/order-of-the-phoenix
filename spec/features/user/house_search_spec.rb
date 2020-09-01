@@ -11,5 +11,6 @@ RSpec.describe 'As a user' do
 
     expect(current_path).to eq(search_path)
 
+    expect(page).to have_content("House Members: 21")
   end
 end
