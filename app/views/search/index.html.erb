@@ -4,5 +4,9 @@
 
 <h5>Students by Name:</h5>
 <% @house.members.each do |member| %>
-  <p><%= member[:name] %> of House <%= @house.house_name %></p>
+  <% @characters.each do |character| %>
+    <% if member[:name] == character[:name] %>
+      <p><%= member[:name] %> of House <%= @house.house_name %>, Role: <%= character[:role] %>, Patronus: <%= character[:patronus] %></p>
+      <% end %>
+  <% end %>
 <% end %>
