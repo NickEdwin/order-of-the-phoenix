@@ -15,4 +15,9 @@ class Potter
       Potter.new(house)
     end
   end
+
+  def self.characters
+    potter_service = PotterService.new
+    character_info = potter_service.characters
+  end
 end
